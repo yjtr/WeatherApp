@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/bg_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/back"
+        android:scaleType="centerCrop"
+        android:contentDescription="Background Image" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/city_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/add_delete_layout"
+        android:layout_marginBottom="8dp"
+        android:fadeScrollbars="true"
+        android:paddingHorizontal="16dp"
+        android:padding="40dp"
+        android:scrollbars="vertical" />
+
+    <LinearLayout
+        android:id="@+id/add_delete_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/add_button"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:background="#80FFFFFF"
+            android:gravity="center"
+            android:text="添加城市"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:elevation="4dp" />
+
+        <Button
+            android:id="@+id/delete_button"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:background="#80FFFFFF"
+            android:gravity="center"
+            android:text="删除城市"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:elevation="4dp" />
+    </LinearLayout>
+
+</RelativeLayout>

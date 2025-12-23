@@ -1,0 +1,325 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background Image -->
+    <ImageView
+        android:id="@+id/bg_image"
+        android:src="@drawable/back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:contentDescription="Background Image" />
+
+    <!-- Search Bar Section -->
+    <LinearLayout
+        android:id="@+id/search_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#80FFFFFF"
+        android:padding="12dp"
+        android:elevation="4dp">
+
+        <EditText
+            android:id="@+id/search_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:hint="请输入城市名称"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:textColorHint="#CCFFFFFF"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:inputType="textCapSentences|textAutoComplete|textAutoCorrect"
+            android:imeOptions="actionSearch"
+            android:maxLines="1"
+            android:singleLine="true" />
+
+        <ImageButton
+            android:id="@+id/search_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/transparent"
+            android:src="@android:drawable/ic_menu_search"
+            android:contentDescription="搜索"
+            android:tint="@android:color/white" />
+    </LinearLayout>
+
+    <!-- Search Results Section -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/search_results_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_bar_layout"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_above="@id/add_delete_layout"
+        android:visibility="gone"
+        android:scrollbars="vertical" />
+
+    <!-- City Grid Section -->
+    <ScrollView
+        android:id="@+id/city_grid_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_bar_layout"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_above="@id/add_delete_layout"
+        android:fillViewport="false">
+
+        <GridLayout
+            android:id="@+id/city_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="5"
+            android:orientation="horizontal"
+            android:alignmentMode="alignBounds"
+            android:useDefaultMargins="false">
+
+            <!-- City Buttons -->
+            <Button
+                android:id="@+id/city_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:minHeight="48dp"
+                android:background="#80FFFFFF"
+                android:gravity="center"
+                android:text="北京"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:elevation="2dp" />
+
+            <Button
+                android:id="@+id/city_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:minHeight="48dp"
+                android:background="#80FFFFFF"
+                android:gravity="center"
+                android:text="上海"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:elevation="2dp" />
+
+            <Button
+                android:id="@+id/city_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:minHeight="48dp"
+                android:background="#80FFFFFF"
+                android:gravity="center"
+                android:text="广州"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:elevation="2dp" />
+
+            <Button
+                android:id="@+id/city_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:minHeight="48dp"
+                android:background="#80FFFFFF"
+                android:gravity="center"
+                android:text="深圳"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:elevation="2dp" />
+
+            <Button
+                android:id="@+id/city_5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:minHeight="48dp"
+                android:background="#80FFFFFF"
+                android:gravity="center"
+                android:text="成都"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:elevation="2dp" />
+
+            <Button
+                android:id="@+id/city_6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:minHeight="48dp"
+                android:background="#80FFFFFF"
+                android:gravity="center"
+                android:text="杭州"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:elevation="2dp" />
+
+            <Button
+                android:id="@+id/city_7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:minHeight="48dp"
+                android:background="#80FFFFFF"
+                android:gravity="center"
+                android:text="武汉"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:elevation="2dp" />
+
+            <Button
+                android:id="@+id/city_8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:minHeight="48dp"
+                android:background="#80FFFFFF"
+                android:gravity="center"
+                android:text="南京"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:elevation="2dp" />
+
+            <Button
+                android:id="@+id/city_9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:minHeight="48dp"
+                android:background="#80FFFFFF"
+                android:gravity="center"
+                android:text="青岛"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:elevation="2dp" />
+
+            <Button
+                android:id="@+id/city_10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:minHeight="48dp"
+                android:background="#80FFFFFF"
+                android:gravity="center"
+                android:text="厦门"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:elevation="2dp" />
+
+            <Button
+                android:id="@+id/city_11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:minHeight="48dp"
+                android:background="#80FFFFFF"
+                android:gravity="center"
+                android:text="沈阳"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:elevation="2dp" />
+
+            <Button
+                android:id="@+id/city_12"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:minHeight="48dp"
+                android:background="#80FFFFFF"
+                android:gravity="center"
+                android:text="天津"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:elevation="2dp" />
+
+            <Button
+                android:id="@+id/city_13"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:minHeight="48dp"
+                android:background="#80FFFFFF"
+                android:gravity="center"
+                android:text="重庆"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:elevation="2dp" />
+
+            <Button
+                android:id="@+id/city_14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:minHeight="48dp"
+                android:background="#80FFFFFF"
+                android:gravity="center"
+                android:text="香港"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:elevation="2dp" />
+
+            <Button
+                android:id="@+id/city_15"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:minHeight="48dp"
+                android:background="#80FFFFFF"
+                android:gravity="center"
+                android:text="合肥"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:elevation="2dp" />
+
+        </GridLayout>
+    </ScrollView>
+
+    <!-- Add Button Section -->
+    <LinearLayout
+        android:id="@+id/add_delete_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="24dp"
+        android:layout_marginHorizontal="16dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/add_button"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="#80FFFFFF"
+            android:gravity="center"
+            android:text="添加城市"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:elevation="4dp" />
+    </LinearLayout>
+
+</RelativeLayout>
