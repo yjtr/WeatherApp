@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@drawable/day_forecast_border"
+    android:layout_margin="4dp"
+    android:minWidth="100dp">
+
+    <ImageView
+        android:id="@+id/icon_daily"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:contentDescription="天气图标"
+        android:scaleType="centerInside" />
+
+    <TextView
+        android:id="@+id/tv_date_daily"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="12/25"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_weather_daily"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="多云"
+        android:textColor="@android:color/black"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tv_temp_daily"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="高: 2°C / 低: -6°C"
+        android:textColor="@android:color/black"
+        android:textSize="12sp" />
+</LinearLayout>
+
